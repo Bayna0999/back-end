@@ -1,7 +1,7 @@
-import { users } from "./users";
+import { users } from "./users.js";
 
 // app.post("/order/create",
-export const orders = [];
+export let orders = [];
 export const createOrder = (req, res) => {
   const { id, food, price } = req.body;
   let username = "";
@@ -25,6 +25,6 @@ export const createOrder = (req, res) => {
 };
 
 // app.get("/orders",
-export const getOrdersById = (req, res) => {
+export const getOrders = (req, res) => {
   res.send(orders);
 };

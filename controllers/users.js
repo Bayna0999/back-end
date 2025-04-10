@@ -1,7 +1,7 @@
 // app.post("/user/create",
 
 import { v4 as uuidv4 } from "uuid";
-export const users = [];
+export let users = [];
 export const createUser = (req, res) => {
   const { username, gender, age, email } = req.body;
   console.log(req.body, "body");
@@ -25,7 +25,7 @@ export const getUsers = (req, res) => {
 // app.get("/user",
 export const getUserById = (req, res) => {
   const { id } = req.params;
-  const searchId = users.find((user) => user.id == id);
+  const searchId = users.find((user) => user.id === id);
   res.send(searchId);
 };
 
